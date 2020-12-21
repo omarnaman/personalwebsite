@@ -153,21 +153,12 @@ form textarea:focus {
   transition: all 0.2s ease-in 0s;
   float: left;
 }
-@media screen and (max-width: 559px) {
-  .btn {
-    width: 100%;
-  }
-}
+
 .btn.clear {
   background-color: #0e393b;
   margin-right: 1rem;
 }
-@media screen and (max-width: 559px) {
-  .btn.clear {
-    margin-right: 0;
-    margin-bottom: 1rem;
-  }
-}
+
 .btn.action {
   background-color: #ddc5f3;
   color: #F4F7F7;
@@ -186,13 +177,9 @@ form textarea:focus {
   width: 100%;
   text-align: center;
   bottom: 25.6px;
+  display: none;
 }
 
-@media screen and (max-width: 559px) {
-  .scroll-icon {
-    display: none;
-  }
-}
 @media screen and (max-height: 1023px) {
   .scroll-icon {
     display: none;
@@ -249,18 +236,13 @@ form textarea:focus {
 	=================================================================================================
 */
 .section {
-  position: absolute;
-  height: 100%;
-  width: 100%;
+  position: relative;
+  height: 100vh;
+  /* width: 100%; */
+  padding: 102.4px 0;
 }
 
-@media screen and (max-width: 559px) {
-  .section {
-    position: relative;
-    height: auto;
-    padding: 102.4px 0;
-  }
-}
+
 @media screen and (max-height: 1023px) {
   .section {
     position: relative;
@@ -270,17 +252,12 @@ form textarea:focus {
 }
 .section .section-container {
   position: relative;
-  top: 50%;
+  top: 20%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  transform: none;
 }
-@media screen and (max-width: 559px) {
-  .section .section-container {
-    top: 0;
-    transform: none;
-  }
-}
+
 @media screen and (max-height: 1023px) {
   .section .section-container {
     top: 20%;
@@ -295,22 +272,16 @@ form textarea:focus {
 */
 #nav-bar {
   display: block;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
-  height: 100%;
+  height: auto;
+  width: 100%;
   z-index: 9999;
+  background-color: rgb(159, 62, 216);
 }
 
-@media screen and (max-width: 559px) {
-  #nav-bar {
-    display: block;
-    position: fixed;
-    height: auto;
-    width: 100%;
-    background-color: rgb(159, 62, 216);
-  }
-}
+
 @media screen and (max-height: 1023px) {
   #nav-bar {
     display: block;
@@ -322,21 +293,15 @@ form textarea:focus {
 }
 #nav-bar .nav-container {
   position: relative;
-  top: 50%;
+  top: 0;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  padding: 3.125rem;
+  transform: none;
+  padding: 0;
   text-align: center;
 }
 
-@media screen and (max-width: 559px) {
-  #nav-bar .nav-container {
-    transform: none;
-    top: 0;
-    padding: 0;
-  }
-}
+
 @media screen and (max-height: 1023px) {
   #nav-bar .nav-container {
     transform: none;
@@ -356,12 +321,7 @@ form textarea:focus {
   background-color: rgb(159, 62, 216);
   padding: 0.625rem;
 }
-@media screen and (max-width: 559px) {
-  #nav-bar .nav-container .toggle-nav {
-    display: block;
-    position: relative;
-  }
-}
+
 #nav-bar .nav-container .toggle-nav i {
   color: blueviolet;
   font-size: 3rem;
@@ -372,13 +332,10 @@ form textarea:focus {
 #nav-bar .nav-container .toggle-nav i:active {
   color: #0e393b;
 }
-@media screen and (max-width: 559px) {
-  #nav-bar .nav-container ul {
-    display: none;
-  }
-}
+
 #nav-bar .nav-container ul li {
   text-align: center;
+  display: inline-table;
 }
 
 @media screen and (max-height: 1023px) {
@@ -386,16 +343,12 @@ form textarea:focus {
     display: inline-table;
   }
 }
-@media screen and (max-width: 559px) {
-  #nav-bar .nav-container ul li {
-    display: block;
-  }
-}
 #nav-bar .nav-container ul li a {
   color: #F4F7F7;
   display: block;
   text-transform: uppercase;
   padding: 0.9375rem 0.9375rem;
+  cursor: pointer;
 }
 
 @media screen and (max-height: 1023px) {
@@ -403,44 +356,32 @@ form textarea:focus {
     cursor: pointer;
   }
 }
-@media screen and (max-width: 559px) {
-  #nav-bar .nav-container ul li a {
-    font-size: 2rem;
-    padding: 0.9375rem 0.625rem;
-    cursor: pointer;
-  }
-}
+
 #nav-bar .nav-container ul li a:hover {
   border: none;
-  color: #F4F7F7;
+  color: #0e393b;
 }
 
-@media screen and (max-width: 559px) {
-  #nav-bar .nav-container ul li a:hover {
-    color: #F4F7F7;
-  }
-}
+
 @media screen and (max-height: 1023px) {
   #nav-bar .nav-container ul li a:hover {
     color: #0e393b;
   }
 }
 #nav-bar .nav-container ul li.active a {
-  background-color: rgb(159, 62, 216);
+  background-color: grey;
   color: #F4F7F7;
 }
 
-@media screen and (max-width: 559px) {
-  #nav-bar .nav-container ul li.active a {
-    background-color: grey;
-    color: #F4F7F7;
-  }
-}
+
 @media screen and (max-height: 1023px) {
   #nav-bar .nav-container ul li.active a {
     background-color: grey;
     color: #F4F7F7;
   }
+}
+#nav-bar .nav-container ul li.active a:hover{
+  color: #0e393b;
 }
 @media screen and (max-height: 1023px) {
   #nav-bar .nav-container ul li.active a:hover {
@@ -485,12 +426,7 @@ form textarea:focus {
   transition: all 0.2s ease-in 0s;
 }
 
-@media screen and (max-width: 559px) {
-  #home .profil .profil-img {
-    height: 8.25rem;
-    width: 8.25rem;
-  }
-}
+
 #home .profil h1 {
   font-size: 3.5rem;
   margin-bottom: 0;
@@ -504,12 +440,7 @@ form textarea:focus {
   transition: all 0.2s ease-in 0s;
 }
 
-@media screen and (max-width: 559px) {
-  #home .profil h1 {
-    font-size: 2.25rem;
-    text-shadow: 0.1875rem 0.1875rem #0e393b;
-  }
-}
+
 #home .profil p u {
   display: inline-block;
   color: #F4F7F7;
