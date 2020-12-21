@@ -70,7 +70,7 @@ a:hover,
 a:link:hover,
 a:visited:hover,
 a:active:hover {
-  border-bottom-color: #2FC5CC;
+  border-bottom-color: grey;
   border-bottom-style: solid;
   border-bottom-width: 0.125rem;
 }
@@ -113,7 +113,7 @@ form input {
   transition: all 0.2s ease-in 0s;
 }
 form input:focus {
-  border-left-color: #F06868;
+  border-left-color: #ddc5f3;
   border-left-style: solid;
   border-left-width: 0.25rem;
 }
@@ -132,7 +132,7 @@ form textarea {
   transition: all 0.2s ease-in 0s;
 }
 form textarea:focus {
-  border-left-color: #F06868;
+  border-left-color: #ddc5f3;
   border-left-style: solid;
   border-left-width: 0.25rem;
 }
@@ -169,7 +169,7 @@ form textarea:focus {
   }
 }
 .btn.action {
-  background-color: #F06868;
+  background-color: #ddc5f3;
   color: #F4F7F7;
 }
 .btn:hover {
@@ -187,17 +187,13 @@ form textarea:focus {
   text-align: center;
   bottom: 25.6px;
 }
-@media screen and (max-width: 1023px) {
-  .scroll-icon {
-    display: none;
-  }
-}
+
 @media screen and (max-width: 559px) {
   .scroll-icon {
     display: none;
   }
 }
-@media screen and (max-height: 719px) {
+@media screen and (max-height: 1023px) {
   .scroll-icon {
     display: none;
   }
@@ -246,55 +242,6 @@ form textarea:focus {
   animation: scroll 1s ease-out infinite;
 }
 
-@media screen and (max-width: 559px) {
-  .social-links {
-    margin-bottom: 25.6px;
-  }
-}
-.social-links a {
-  display: inline-block;
-  background-color: #F4F7F7;
-  color: #0e393b;
-  height: 51.2px;
-  width: 51.2px;
-  line-height: 51.2px;
-  margin-right: 1rem;
-  -webkit-transition: all 0.2s ease-in 0s;
-  -moz-transition: all 0.2s ease-in 0s;
-  transition: all 0.2s ease-in 0s;
-}
-@media screen and (max-width: 559px) {
-  .social-links a {
-    height: 40.96px;
-    width: 40.96px;
-    line-height: 40.96px;
-    margin-right: 0.5rem;
-  }
-}
-.social-links a:last-of-type {
-  margin-right: 0;
-}
-.social-links a i {
-  font-size: 1.25rem;
-  text-align: center;
-}
-.social-links a:hover {
-  background-color: #2FC5CC;
-  color: #F4F7F7;
-  border: none;
-}
-@media screen and (max-width: 559px) {
-  .social-links a:hover {
-    background-color: #F4F7F7;
-    color: #0e393b;
-  }
-}
-@media screen and (max-width: 559px) {
-  .social-links a:active {
-    background-color: #2FC5CC;
-    color: #F4F7F7;
-  }
-}
 
 /*
 	=================================================================================================
@@ -306,13 +253,7 @@ form textarea:focus {
   height: 100%;
   width: 100%;
 }
-@media screen and (max-width: 1023px) {
-  .section {
-    position: relative;
-    height: 100vh;
-    padding: 102.4px 0;
-  }
-}
+
 @media screen and (max-width: 559px) {
   .section {
     position: relative;
@@ -320,10 +261,10 @@ form textarea:focus {
     padding: 102.4px 0;
   }
 }
-@media screen and (max-height: 719px) {
+@media screen and (max-height: 1023px) {
   .section {
     position: relative;
-    height: auto;
+    height: 100vh;
     padding: 102.4px 0;
   }
 }
@@ -340,9 +281,9 @@ form textarea:focus {
     transform: none;
   }
 }
-@media screen and (max-height: 719px) {
+@media screen and (max-height: 1023px) {
   .section .section-container {
-    top: 0;
+    top: 20%;
     transform: none;
   }
 }
@@ -353,22 +294,14 @@ form textarea:focus {
 	=================================================================================================
 */
 #nav-bar {
-  display: none;
+  display: block;
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
   z-index: 9999;
 }
-@media screen and (max-width: 1023px) {
-  #nav-bar {
-    display: block;
-    position: fixed;
-    height: auto;
-    width: 100%;
-    background-color: rgb(159, 62, 216);
-  }
-}
+
 @media screen and (max-width: 559px) {
   #nav-bar {
     display: block;
@@ -378,7 +311,7 @@ form textarea:focus {
     background-color: rgb(159, 62, 216);
   }
 }
-@media screen and (max-height: 719px) {
+@media screen and (max-height: 1023px) {
   #nav-bar {
     display: block;
     position: fixed;
@@ -396,13 +329,7 @@ form textarea:focus {
   padding: 3.125rem;
   text-align: center;
 }
-@media screen and (max-width: 1023px) {
-  #nav-bar .nav-container {
-    transform: none;
-    top: 0;
-    padding: 0;
-  }
-}
+
 @media screen and (max-width: 559px) {
   #nav-bar .nav-container {
     transform: none;
@@ -410,7 +337,7 @@ form textarea:focus {
     padding: 0;
   }
 }
-@media screen and (max-height: 719px) {
+@media screen and (max-height: 1023px) {
   #nav-bar .nav-container {
     transform: none;
     top: 0;
@@ -453,12 +380,8 @@ form textarea:focus {
 #nav-bar .nav-container ul li {
   text-align: center;
 }
-@media screen and (max-width: 1023px) {
-  #nav-bar .nav-container ul li {
-    display: inline-table;
-  }
-}
-@media screen and (max-height: 719px) {
+
+@media screen and (max-height: 1023px) {
   #nav-bar .nav-container ul li {
     display: inline-table;
   }
@@ -474,12 +397,8 @@ form textarea:focus {
   text-transform: uppercase;
   padding: 0.9375rem 0.9375rem;
 }
-@media screen and (max-width: 1023px) {
-  #nav-bar .nav-container ul li a {
-    cursor: pointer;
-  }
-}
-@media screen and (max-height: 719px) {
+
+@media screen and (max-height: 1023px) {
   #nav-bar .nav-container ul li a {
     cursor: pointer;
   }
@@ -495,17 +414,13 @@ form textarea:focus {
   border: none;
   color: #F4F7F7;
 }
-@media screen and (max-width: 1023px) {
-  #nav-bar .nav-container ul li a:hover {
-    color: #0e393b;
-  }
-}
+
 @media screen and (max-width: 559px) {
   #nav-bar .nav-container ul li a:hover {
     color: #F4F7F7;
   }
 }
-@media screen and (max-height: 719px) {
+@media screen and (max-height: 1023px) {
   #nav-bar .nav-container ul li a:hover {
     color: #0e393b;
   }
@@ -514,26 +429,20 @@ form textarea:focus {
   background-color: rgb(159, 62, 216);
   color: #F4F7F7;
 }
-@media screen and (max-width: 1023px) {
-  #nav-bar .nav-container ul li.active a {
-    background-color: rgb(119, 50, 158);
-    border: none;
-    color: #F4F7F7;
-  }
-}
+
 @media screen and (max-width: 559px) {
   #nav-bar .nav-container ul li.active a {
-    background-color: #eb3a3a;
+    background-color: grey;
     color: #F4F7F7;
   }
 }
-@media screen and (max-height: 719px) {
+@media screen and (max-height: 1023px) {
   #nav-bar .nav-container ul li.active a {
-    background-color: #F06868;
+    background-color: grey;
     color: #F4F7F7;
   }
 }
-@media screen and (max-height: 719px) {
+@media screen and (max-height: 1023px) {
   #nav-bar .nav-container ul li.active a:hover {
     color: #0e393b;
   }
@@ -575,12 +484,7 @@ form textarea:focus {
   -moz-transition: all 0.2s ease-in 0s;
   transition: all 0.2s ease-in 0s;
 }
-@media screen and (max-width: 1023px) {
-  #home .profil .profil-img {
-    height: 10.5rem;
-    width: 10.5rem;
-  }
-}
+
 @media screen and (max-width: 559px) {
   #home .profil .profil-img {
     height: 8.25rem;
@@ -599,11 +503,7 @@ form textarea:focus {
   -moz-transition: all 0.2s ease-in 0s;
   transition: all 0.2s ease-in 0s;
 }
-@media screen and (max-width: 1023px) {
-  #home .profil h1 {
-    font-size: 3rem;
-  }
-}
+
 @media screen and (max-width: 559px) {
   #home .profil h1 {
     font-size: 2.25rem;
@@ -646,86 +546,9 @@ form textarea:focus {
   font-size: 2rem;
   color: #000000;
 }
-@media screen and (max-width: 1023px) {
-  #about .intro h1 {
-    font-size: 1.625rem;
-  }
-}
+
 #about .intro p {
   margin: 0 auto;
-}
-#about .skills {
-  position: relative;
-  max-width: 34.375rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1rem;
-}
-#about .skills::after {
-  clear: both;
-  content: "";
-  display: block;
-}
-#about .skills h2 {
-  background-color: #2FC5CC;
-  display: inline-block;
-  padding: 0 0.9375rem;
-}
-#about .skills ul {
-  text-align: center;
-}
-#about .skills ul li {
-  position: relative;
-  display: inline-block;
-  width: 15.625rem;
-  margin-bottom: 25.6px;
-}
-#about .skills ul li:last-child {
-  margin-bottom: 0;
-}
-@media screen and (max-width: 559px) {
-  #about .skills ul li {
-    display: block;
-    width: auto;
-  }
-}
-#about .skills ul li .lvl-1 {
-  position: relative;
-  margin: 25.6px auto 0 auto;
-}
-#about .skills ul li .lvl-1 li {
-  position: relative;
-  display: inline-block;
-  width: 15rem;
-  background-color: #0e393b;
-  padding: 0.625rem;
-  margin-bottom: 0.625rem;
-}
-#about .skills ul li .lvl-1 li:last-child {
-  margin-bottom: 0;
-}
-@media screen and (max-width: 559px) {
-  #about .skills ul li .lvl-1 li {
-    display: block;
-    width: auto;
-  }
-}
-#about .skills ul li .lvl-1 li span {
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  height: 100%;
-  background-color: #F06868;
-  overflow: hidden;
-  font-size: 1px;
-  text-indent: -9999px;
-}
-#about .skills ul li .lvl-1 li u {
-  position: relative;
-  z-index: 2;
-  text-decoration: none;
-  color: #F4F7F7;
 }
 
 /*
@@ -804,7 +627,7 @@ form textarea:focus {
 }
 #resume .thumbnails ul li a span h2 {
   margin-top: 0;
-  color: #F06868;
+  color: grey;
 }
 #resume .thumbnails ul li a span p {
   color: #F4F7F7;
@@ -844,7 +667,7 @@ form textarea:focus {
   content: "";
   display: block;
 }
-@media screen and (max-height: 719px) {
+@media screen and (max-height: 1023px) {
   #contact .title {
     margin-top: 0;
   }

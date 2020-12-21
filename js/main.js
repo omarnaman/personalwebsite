@@ -226,6 +226,8 @@ $(function() {
     // Update winHeight when resizing the window
     $(window).resize(function() {
       winHeight = $(window).height();
+      let winWidth = $(window).width();
+      console.log(winWidth)
       portfolio();
     });
     
